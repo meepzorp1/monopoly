@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    font-family: 'Raleway', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.board {
+  width: 930px;
+  height: 930px;
+  background: #eee;
+}
+
+.property {
+  background: #eee;
+}
+.property__title {
+  padding-top: 5px;
+}
+
+.corner {
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.xxs {
+  font-size: 0.5rem;
+}
+
+.just {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  transform: rotate(90deg);
+}
+
+.visiting {
+  position: absolute;
+  top: 87px;
+  left: 30px;
+
+}
+
+.jail {
+  position: absolute;
+  left: 28px;
+}
+
+.portrait {
+  position: absolute;
+  top: 12px;
+  left: 22px;
+  transform: rotate(45deg);
+
+}
